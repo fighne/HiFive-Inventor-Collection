@@ -1,7 +1,9 @@
-from hifive import uart
 import sys
+import os
 import love
 import this
+import hifive
+import microbit
 
 RUNTIME = "RUN TIME: "
 TEMP = "Temperature: "
@@ -20,59 +22,59 @@ AWAKE = "... Awake now"
 NEWLINE = r"\n"
 
 try :
-    uart.init()
+    hifive.uart.init()
 
-    uart.write(RUNTIME)
-    uart.write(this.running_time())
-    uart.write(NEWLINE)
+    hifive.uart.write(RUNTIME)
+    hifive.uart.write(str(microbit.running_time()))
+    hifive.uart.write(NEWLINE)
 
-    uart.write(TEMP)
-    uart.write(this.temperature())
-    uart.write(NEWLINE)
+    hifive.uart.write(TEMP)
+    hifive.uart.write(str(hifive.temperature()))
+    hifive.uart.write(NEWLINE)
 
-    uart.write(FILELIST)
-    uart.write(os.listdir())
-    uart.write(NEWLINE)
+    hifive.uart.write(FILELIST)
+    hifive.uart.write(str(os.listdir()))
+    hifive.uart.write(NEWLINE)
 
-    uart.write(UNAME)
-    uart.write(os.uname())
-    uart.write(NEWLINE)
+    hifive.uart.write(UNAME)
+    hifive.uart.write(str(os.uname()))
+    hifive.uart.write(NEWLINE)
 
-    uart.write(VERSION)
-    uart.write(sys.version)
-    uart.write(NEWLINE)
+    hifive.uart.write(VERSION)
+    hifive.uart.write(sys.version)
+    hifive.uart.write(NEWLINE)
 
-    uart.write(VERINFO)
-    uart.write(sys.version_info)
-    uart.write(NEWLINE)
+    hifive.uart.write(VERINFO)
+    hifive.uart.write(str(sys.version_info))
+    hifive.uart.write(NEWLINE)
 
-    uart.write(IMP)
-    uart.write(sys.implementation)
-    uart.write(NEWLINE)
+    hifive.uart.write(IMP)
+    hifive.uart.write(str(sys.implementation))
+    hifive.uart.write(NEWLINE)
 
-    uart.write(PLATFORM)
-    uart.write(sys.platform)
-    uart.write(NEWLINE)
+    hifive.uart.write(PLATFORM)
+    hifive.uart.write(sys.platform)
+    hifive.uart.write(NEWLINE)
 
-    uart.write(ENDIAN)
-    uart.write(sys.byteorder)
-    uart.write(NEWLINE)
+    hifive.uart.write(ENDIAN)
+    hifive.uart.write(sys.byteorder)
+    hifive.uart.write(NEWLINE)
 
-    uart.write(AUTHORS)
-    uart.write(this.authors())
-    uart.write(NEWLINE)
+    hifive.uart.write(AUTHORS)
+    hifive.uart.write(str(this.authors()))
+    hifive.uart.write(NEWLINE)
 
-    uart.write(LOVE)
-    uart.write(love.badaboom())
-    uart.write(NEWLINE)
+    hifive.uart.write(LOVE)
+    hifive.uart.write(str(love.badaboom()))
+    hifive.uart.write(NEWLINE)
 
-    uart.write(SLEEPING)
-    this.sleep(5000)
-    uart.write(AWAKE)
-    uart.write(NEWLINE)
+    hifive.uart.write(SLEEPING)
+    hifive.sleep(5000)
+    hifive.uart.write(AWAKE)
+    hifive.uart.write(NEWLINE)
 
-    uart.write(RUNTIME)
-    uart.write(this.running_time())
-    uart.write(NEWLINE)
+    hifive.uart.write(RUNTIME)
+    hifive.uart.write(str(hifive.running_time()))
+    hifive.uart.write(NEWLINE)
 except Exception as ex :
     sys.print_exception(ex)
