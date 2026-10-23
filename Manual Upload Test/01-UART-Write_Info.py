@@ -1,4 +1,7 @@
-from hifive import uart, sys, love, this
+from hifive import uart
+import sys
+import love
+import this
 
 RUNTIME = "RUN TIME: "
 TEMP = "Temperature: "
