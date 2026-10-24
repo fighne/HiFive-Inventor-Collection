@@ -1,4 +1,5 @@
-from hifive import uart, sys, compass
+from hifive import uart, compass
+import sys
 
 COMP = r"Compass\n"
 CALIB = "Calibration: "
@@ -20,8 +21,8 @@ try :
     uart.write(COMP)
 
     uart.write(CALIB)
-    uart.write(compass.is_calibrated())
-    uart.write(NEWLINE)
+    uart.write(str(compass.is_calibrated()) + "\n")
+    #uart.write(NEWLINE)
 
     if not compass.is_calibrated():
         uart.write(CALIBING)

@@ -1,4 +1,6 @@
-from hifive import uart, sys, this, display
+from hifive import uart, display
+import sys
+import this
 from hifive import pin0, pin1, pin2
 
 DOT = "."
