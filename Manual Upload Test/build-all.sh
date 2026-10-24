@@ -1,7 +1,6 @@
 set -x
 ./makecombinedhex.py mpy.hex 01-UART-Write_Info.py -o 01-UART-Write_Info.hex
 ./makecombinedhex.py mpy.hex 02-Button_Image_Display.py -o 02-Button_Image_Display.hex
-./makecombinedhex.py mpy.hex 02a-Image_Display.py -o 02a-Image_Display.hex
 ./makecombinedhex.py mpy.hex 03-UART-Write_Random.py -o 03-UART-Write_Random.hex
 ./makecombinedhex.py mpy.hex 04-Button_Display.py -o 04-Button_Display.hex
 ./makecombinedhex.py mpy.hex 05-Panic_Test.py -o 05-Panic_Test.hex

@@ -71,6 +71,8 @@ import hifive
 ---- Sent utf8 encoded message: "dir(hifive)\r" ----
 dir(hifive)
 ['__name__', 'Image', 'display', 'button_a', 'button_b', 'accelerometer', 'compass', 'i2c', 'uart', 'spi', 'reset', 'sleep', 'running_time', 'panic', 'temperature', 'pin0', 'pin1', 'pin2', 'pin3', 'pin4', 'pin5', 'pin6', 'pin7', 'pin8', 'pin9', 'pin10', 'pin11', 'pin13', 'pin14', 'pin15', 'pin16', 'pin19', 'pin20']
+**Usage Notes**
+- display.clear() not working
 
 import love
 >>> 
@@ -97,6 +99,7 @@ dir(microbit)
 ['__name__', 'Image', 'display', 'button_a', 'button_b', 'accelerometer', 'compass', 'i2c', 'uart', 'spi', 'reset', 'sleep', 'running_time', 'panic', 'temperature', 'pin0', 'pin1', 'pin2', 'pin3', 'pin4', 'pin5', 'pin6', 'pin7', 'pin8', 'pin9', 'pin10', 'pin11', 'pin13', 'pin14', 'pin15', 'pin16', 'pin19', 'pin20']
 **Usage Notes**
 - display status not working compared to 'hifive.display' recommend using hifive.display
+- display.clear() not working
 
 import micropython
 >>> 

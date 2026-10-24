@@ -1,10 +1,11 @@
-from hifive import uart, sys
+from microbit import uart, panic
+import sys
 
-PANICING = r"I'm panicing!\n"
+PANICING = "I'm panicing!\n"
 
 try :
     uart.init()
     uart.write(PANICING)
-    sys.panic()
+    panic()
 except Exception as ex :
     sys.print_exception(ex)
