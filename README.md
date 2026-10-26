@@ -15,6 +15,7 @@ If I find more I'll add and update here.
 
 YouTube Videos
 - https://www.youtube.com/watch?v=6Vy2161Tb48
+- https://www.youtube.com/watch?v=f68zFRgnaWo
 - 
 
 # Notes on compiler
